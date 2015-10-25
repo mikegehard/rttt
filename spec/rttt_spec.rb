@@ -1,5 +1,6 @@
-require 'spec_helper'
-require 'rttt'
+require_relative 'spec_helper'
+require_relative '../lib/rttt.rb'
+require_relative 'rttt_spec.rb'
 
 describe TicTacToe do
 	let (:game) {TicTacToe.new}
