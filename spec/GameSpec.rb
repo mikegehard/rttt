@@ -1,8 +1,8 @@
 require_relative 'spec_helper'
 require_relative '../lib/Game.rb'
 require_relative 'GameSpec.rb'
-#require "rttt"
-#require "AI"
+require_relative '../lib/rttt.rb'
+require_relative '../lib/AI.rb'
 
 #Test cases for Game
 #1) Says hello
@@ -28,7 +28,8 @@ describe Game do
 		expect(game.turn).to eq(true)
 	end
 
-#describe '#play' do
-#	it 'swaps the turn'
-#end
+
+describe '#play' do
+	it 'swaps the turn'
+end
 end
