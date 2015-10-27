@@ -7,14 +7,14 @@ class TicTacToe
 		@size = 9
 	end 
 
-	def move(index, turn)
-		@board[index - 1] = (turn ? "X" : "O")
-	end
-
 	def set_board(new_board)
 		(0...board.length).each do |index|
 			@board[index] = new_board[index]
 		end
+	end
+
+	def move(index, turn)
+		@board[index - 1] = (turn ? "X" : "O")
 	end
 
 	def winner?
@@ -46,16 +46,20 @@ class TicTacToe
 		end
 	end
 
+	def get_board
+		return @board
+	end
+
 	def has_winner?
 		!!winner?
 	end
 
-	def reset!
+	def reset
 		(0...board.length).each do |i|
 			@board[i] = nil
 	end
 
-	def over?
+	def over
 		has_winner? || draw?
 	end
 
